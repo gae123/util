@@ -1,0 +1,16 @@
+#cloud-config
+
+hostname: ro3
+users:
+  - name: panos
+    coreos-ssh-import-github: gae123
+groups:
+  - panos: [panos]
+bootcmd:
+  - mkdir /mnt/sdb1
+write_files:
+  - path: /etc/fstab
+    permissions: 0644
+    owner: root
+    content: |
+      /dev/sdb1  /mnt/sdb1  ext4  defaults  0  2
