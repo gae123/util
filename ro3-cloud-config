@@ -2,12 +2,11 @@
 
 hostname: ro3
 users:
-  - name: panos
+  - name: core
     coreos-ssh-import-github: gae123
     groups:
       - sudo
       - docker
-    sudo: ALL=(ALL) NOPASSWD:ALL
 write_files:
   - path: /etc/fstab
     permissions: 0644
