@@ -4,8 +4,6 @@ hostname: ro3
 users:
   - name: panos
     coreos-ssh-import-github: gae123
-groups:
-  - panos: [panos]
 bootcmd:
   - mkdir /mnt/sdb1
 write_files:
